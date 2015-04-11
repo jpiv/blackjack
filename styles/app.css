@@ -42,6 +42,21 @@
   background-color: rgba(166, 234, 217, .60);
 }
 
+button {
+    border: none;
+    padding: 10px 15px;
+    background-color: #e67e22;
+    color: #FFF;
+    border-radius: 8px;
+}
+
+button:hover {
+    border: none;
+    padding: 10px 15px;
+    background: #f39c12;
+    color: #FFF;
+}
+
 body {
   background-image: url('http://www.yee7.com/wallpaper/minimal/minimal-wallpaper-minimalist-wallpaper-1920x1080-hd-android-deviantart-reddit-iphone-lifehacker-5-ipad-desktop.jpg');
   background-size: cover;
