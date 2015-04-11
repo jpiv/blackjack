@@ -11,7 +11,7 @@ class window.Hand extends Backbone.Collection
         @add(lastCard)
         lastCard
       if @minScore() > 21
-        @trigger 'bust', @
+        @trigger 'bust'
         null
 
   stand: ->
@@ -37,5 +37,6 @@ class window.Hand extends Backbone.Collection
     # Usually, that array contains one element. That is the only score.
     # when there is an ace, it offers you two scores - the original score, and score + 10.
     [@minScore(), @minScore() + 10 * @hasAce()]
+
 
 
