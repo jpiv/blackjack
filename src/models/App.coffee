@@ -5,7 +5,7 @@ class window.App extends Backbone.Model
     @set 'deck', deck = new Deck()
     @set 'playerHand', deck.dealPlayer()
     @set 'dealerHand', deck.dealDealer()
-    (@get 'playerHand').on 'bust', @reset, @
+    (@get 'playerHand').on 'bust',(-> @trigger 'playerBust', @), @
 
 
   reset: ->
@@ -13,7 +13,6 @@ class window.App extends Backbone.Model
     @set 'playerHand', deck.dealPlayer()
     @set 'dealerHand', deck.dealDealer()
     (@get 'playerHand').on 'bust', @reset, @
-    alert 'busted'
     @trigger 'reset', @
 
 

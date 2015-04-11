@@ -5,7 +5,7 @@ class window.AppView extends Backbone.View
     <div class="dealer-hand-container"></div>
   '
 
-  el: "<div id='main'></div>"
+  el: "<><div id='main'></div>"
 
   events:
     'click .hit-button': -> @model.get('playerHand').hit()
@@ -17,6 +17,7 @@ class window.AppView extends Backbone.View
 
   initialize: ->
     @model.on 'reset', @render, @
+    @model.on 'playerBust', (-> (@$el.find '.endGame').html @checkWin()), @
     @render()
 
   render: ->
@@ -27,7 +28,9 @@ class window.AppView extends Backbone.View
     @$el.append '<span class="endGame"></span>'
 
   checkWin: ->
-    if @model.get('dealerHand').minScore() > 21
+    if @model.get('playerHand').minScore() > 21
+      "YOU LOSE"
+    else if @model.get('dealerHand').minScore() > 21
       "YOU WIN!"
     else if @model.get('playerHand').minScore() > @model.get('dealerHand').minScore()
       "YOU WIN!"
