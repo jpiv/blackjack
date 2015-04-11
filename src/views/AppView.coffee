@@ -28,7 +28,6 @@ class window.AppView extends Backbone.View
     @render()
 
   render: (outcome)->
-    console.log outcome
     outcome = outcome or ""
     @attributes.outcome = outcome
     if outcome isnt ""

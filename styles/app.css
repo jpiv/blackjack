@@ -8,12 +8,17 @@
   text-align: center;
   vertical-align: center;
   padding: 10px;
+  position: relative;
 }
 
 
 .card:hover {
   border-color: aqua;
   color: rgba(120,255,255,.850);
+}
+
+.move {
+  top: -10px;
 }
 
 .covered {

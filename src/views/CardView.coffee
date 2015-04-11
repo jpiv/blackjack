@@ -11,4 +11,6 @@ class window.CardView extends Backbone.View
     @$el.children().detach()
     @$el.html @template @model.attributes
     @$el.addClass 'covered' unless @model.get 'revealed'
+    @$el.mouseenter (=> @$el.animate {top: '-10px'})
+    @$el.mouseleave (=> @$el.animate {top: '0px'})
 
