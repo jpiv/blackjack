@@ -1,10 +1,19 @@
 .card {
   float: left;
-  border: solid 1px black;
+  border: solid 3px rgba(255,255,255,.70);
   width: 100px;
-  border-radius: 5px;
+  border-radius: 10px;
   height: 140px;
   margin-right: 20px;
+  text-align: center;
+  vertical-align: center;
+  padding: 10px;
+}
+
+
+.card:hover {
+  border-color: aqua;
+  color: rgba(120,255,255,.850);
 }
 
 .covered {
@@ -13,4 +22,29 @@
 
 .hand {
   overflow: auto;
+}
+
+.endGame {
+  color: aqua;
+  font-weight: bold;
+  font-size: 45px;
+  left: 50%;
+}
+
+#main {
+  position: fixed;
+  top: 25%;
+  left: 30%;
+  height: 550px;
+  padding: 20px 40px;
+  border-radius: 60px;
+  width: 700px;
+  background-color: rgba(166, 234, 217, .60);
+}
+
+body {
+  background-image: url('http://www.yee7.com/wallpaper/minimal/minimal-wallpaper-minimalist-wallpaper-1920x1080-hd-android-deviantart-reddit-iphone-lifehacker-5-ipad-desktop.jpg');
+  background-size: cover;
+  font-family: 'Nunito', sans-serif;
+  color: rgba(255,255,255,.70);
 }
